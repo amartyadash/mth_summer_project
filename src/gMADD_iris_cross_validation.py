@@ -137,7 +137,7 @@ def k_nearest_neighbors(train, test, num_neighbors):
 	for row in test:
 		output = predict_classification(train, row, num_neighbors)
 		predictions.append(output)
-	return(predictions)
+	return predictions
 
 # Test the kNN on the Iris Flowers dataset
 seed(1)

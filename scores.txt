@@ -1,10 +1,20 @@
 
 IRIS DATASET: Low Dimension
-
+{
 gMADD
+
 Scores: [96.66666666666667, 96.66666666666667, 100.0, 90.0, 96.66666666666667]
 Mean Accuracy: 96.000%
 
 Euclidean 
+
 Scores: [96.66666666666667, 96.66666666666667, 100.0, 90.0, 100.0]
 Mean Accuracy: 96.667%
+
+Euclidean and GridSearchCV using SciKit-Learn
+
+{'n_neighbors': 6} # Optimal value using GSCV 
+Accuracy % = 98.00000000000001
+
+
+}
