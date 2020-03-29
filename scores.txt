@@ -1,20 +1,21 @@
 
-IRIS DATASET: Low Dimension
-{
-gMADD
+IRIS DATASET:
 
-Scores: [96.66666666666667, 96.66666666666667, 100.0, 90.0, 96.66666666666667]
-Mean Accuracy: 96.000%
+gMADD:
+	Scores: [96.66666666666667, 96.66666666666667, 100.0, 90.0, 96.66666666666667]
+	Mean Accuracy: 96.000%
 
-Euclidean 
+Euclidean:
+	Scores: [96.66666666666667, 96.66666666666667, 100.0, 90.0, 100.0]
+	Mean Accuracy: 96.667%
 
-Scores: [96.66666666666667, 96.66666666666667, 100.0, 90.0, 100.0]
-Mean Accuracy: 96.667%
+GridSearchCV:
+	{'n_neighbors': 6} # Optimal value using GSCV 
+	Accuracy % = 98.00000000000001
 
-Euclidean and GridSearchCV using SciKit-Learn
+-------------------------------------------------------------------------------------------------------------------------------------
+MUSHROOMS DATASET:
 
-{'n_neighbors': 6} # Optimal value using GSCV 
-Accuracy % = 98.00000000000001
-
-
-}
+GridSearchCV:
+	{'n_neighbors': 1} # Optimal value using GSCV 
+	Accuracy % = 90.66700265251988

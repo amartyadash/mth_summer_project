@@ -73,7 +73,7 @@ def predict_classification(train, test_row, num_neighbors):
 	return prediction
 
 # Make a prediction with KNN on Iris Dataset
-filename = 'datasets/iris.csv'
+filename = '../datasets/iris_1.csv'
 dataset = load_csv(filename)
 for i in range(len(dataset[0])-1):
 	str_column_to_float(dataset, i)
@@ -82,7 +82,8 @@ str_column_to_int(dataset, len(dataset[0])-1)
 # define model parameter
 num_neighbors = 5
 # define a new record
-row = [7.1,3.0,5.9,2.1] # Actual Iris-virginica : 0
+row = [7.1,3.0,5.9,2.1] # Actual Iris-virginica
 # predict the label
 label = predict_classification(dataset, row, num_neighbors)
 print('Data=%s, Predicted: %s' % (row, label))
+print('Actual: Iris-virginica')
