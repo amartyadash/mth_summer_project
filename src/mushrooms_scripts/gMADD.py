@@ -3,7 +3,8 @@ from random import seed
 from random import randrange
 from csv import reader
 from math import sqrt
-
+from sklearn.preprocessing import LabelEncoder
+import pandas as pd 
 
 # Load a CSV file
 def load_csv(filename):
@@ -158,12 +159,21 @@ def k_nearest_neighbors(train, test, num_neighbors):
 
 # Test the kNN on the Iris Flowers dataset
 seed(1)
-filename = 'datasets/iris.csv'
+
+data = pd.read_csv('../datasets/mushrooms.csv')
+labelencoder = LabelEncoder()
+for col in data.columns:
+    data[col] = labelencoder.fit_transform(data[col])
+
+data.to_csv('../datasets/mushrooms_custom.csv')
+filename = '../datasets/mushrooms_custom.csv'
 dataset = load_csv(filename)
-for i in range(len(dataset[0]) - 1):
+del dataset[0]
+
+for i in range(len(dataset[0])):
     str_column_to_float(dataset, i)
 # convert class column to integers
-str_column_to_int(dataset, len(dataset[0]) - 1)
+#str_column_to_int(dataset, len(dataset[0]) - 1)
 # evaluate algorithm
 n_folds = 5
 num_neighbors = 5

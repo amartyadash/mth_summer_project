@@ -19,3 +19,8 @@ MUSHROOMS DATASET:
 GridSearchCV:
 	{'n_neighbors': 1} # Optimal value using GSCV 
 	Accuracy % = 90.66700265251988
+
+gMADD:
+	Scores: [51.908866995073886, 53.50985221674877, 51.04679802955665, 52.40147783251231, 52.52463054187192]
+	Mean Accuracy: 52.278%
+	##Takes a long time/inefficient
